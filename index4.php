@@ -92,13 +92,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!empty($_POST['euros'])) {
     $euros_input = (float)$_POST['euros'];
     $pounds = $e2p->converter($euros_input);
+
   }  if (!empty($_POST['pounds'])) {
     $pounds_input = (float)$_POST['pounds'];
     $euros = $p2e->converter($pounds_input);
+
   }
   if (!empty($_POST['celsius'])) {
     $celsius_input = (float)$_POST['celsius'];
     $fahrenheit = $c2f->converter($celsius_input);
+
   }
   if (!empty($_POST['fahrenheit'])) {
     $fahrenheit_input = (float)$_POST['fahrenheit'];
@@ -117,8 +120,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="number" id="euros" name="euros" step="0.01">
     <input type="submit" value="Convert to GBP">
 </form>
+
 <form action="" method="post">
-    <label for="Pounds">Pounds:</label>
+    <label for="pounds">Pounds:</label>
     <input type="number" id="pounds" name="pounds" step="0.01">
     <input type="submit" value="Convert to Euros">
 </form>
